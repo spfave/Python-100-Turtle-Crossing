@@ -1,5 +1,5 @@
 import time
-from turtle import Screen
+import game_parameters as gp
 from player import Player
 from car_manager import CarManager
 from scoreboard import Scoreboard
@@ -7,9 +7,7 @@ from scoreboard import Scoreboard
 
 # Main --------------------------------------------------------------
 # Game setup
-screen = Screen()
-screen.setup(width=600, height=600)
-screen.tracer(0)
+screen = gp.game_screen()
 
 player = Player()
 scoreboard = Scoreboard()
