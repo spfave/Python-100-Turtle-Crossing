@@ -29,9 +29,11 @@ while game_is_on:
 
     if ge.detect_car_collision(player, carmanager.cars):
         game_is_on = False
+        scoreboard.game_over()
 
     if ge.detect_road_crossing(player.ycor()):
         scoreboard.level_up()
         player.reset()
+        carmanager.increase_speed()
 
 screen.exitonclick()
