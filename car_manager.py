@@ -31,8 +31,7 @@ class Car(Turtle):
     def move(self, move_increment):
         """ Move car forward """
         x = self.xcor()-move_increment
-        y = self.ycor()
-        self.goto(x, y)
+        self.setx(x)
 
 
 class CarManager:

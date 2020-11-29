@@ -1,13 +1,18 @@
 from turtle import Screen
+from math import sqrt
 
 
 # Constants
 WINDOW_WIDTH = 600
 WINDOW_HEIGHT = 600
 
+CAR_LENGTH = 40
+CAR_WIDTH = 20
+
 
 # Variables
 limit_x = int(WINDOW_WIDTH/2)
+car_collision_limit = sqrt((CAR_LENGTH/2)**2 + CAR_WIDTH**2)
 
 
 # Functions

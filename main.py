@@ -1,5 +1,6 @@
 import time
 import game_parameters as gp
+import game_engine as ge
 from player import Player
 from car_manager import CarManager
 from scoreboard import Scoreboard
@@ -25,5 +26,8 @@ while game_is_on:
 
     carmanager.randomly_add_car()
     carmanager.move_cars()
+
+    if ge.detect_car_collision(player, carmanager.cars):
+        game_is_on = False
 
 screen.exitonclick()
