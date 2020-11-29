@@ -14,7 +14,6 @@ CAR_WIDTH = 20
 
 # Variables
 limit_x = int(WINDOW_WIDTH/2)
-car_collision_limit = sqrt((CAR_LENGTH/2)**2 + CAR_WIDTH**2)
 
 
 # Functions

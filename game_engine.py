@@ -1,4 +1,4 @@
-from game_parameters import FINISH_LINE_Y, car_collision_limit
+from game_parameters import FINISH_LINE_Y
 
 
 # Functions
@@ -6,7 +6,7 @@ def detect_car_collision(player, cars):
     """ Evaluate if a car has collided with the player """
 
     for car in cars:
-        if player.distance(car.position()) <= car_collision_limit:
+        if player.distance(car) < 20:
             return True
     return False
 
