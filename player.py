@@ -3,7 +3,6 @@ from turtle import Turtle
 
 # Constants
 STARTING_POSITION = (0, -280)
-FINISH_LINE_Y = 280
 MOVE_DISTANCE = 10
 
 

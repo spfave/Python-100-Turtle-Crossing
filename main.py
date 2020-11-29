@@ -30,4 +30,8 @@ while game_is_on:
     if ge.detect_car_collision(player, carmanager.cars):
         game_is_on = False
 
+    if ge.detect_road_crossing(player.ycor()):
+        scoreboard.level_up()
+        player.reset()
+
 screen.exitonclick()

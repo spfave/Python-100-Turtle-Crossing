@@ -2,7 +2,7 @@ from turtle import Turtle
 
 
 # Constants
-TEXT_ALIGNMENT = "left"
+TEXT_ALIGNMENT_LEVEL = "left"
 TEXT_FONT = ("Courier", 16, "normal")
 SCOREBOARD_POSITION = (-285, 265)
 
@@ -21,9 +21,12 @@ class Scoreboard(Turtle):
         self.write_level()
 
     def write_level(self):
+        """ Write level to screen """
         self.clear()
         self.write(f"Level: {self.level}",
-                   align=TEXT_ALIGNMENT, font=TEXT_FONT)
+                   align=TEXT_ALIGNMENT_LEVEL, font=TEXT_FONT)
 
-    def increase_level(self):
+    def level_up(self):
+        """ Increase level """
         self.level += 1
+        self.write_level()

@@ -6,6 +6,8 @@ from math import sqrt
 WINDOW_WIDTH = 600
 WINDOW_HEIGHT = 600
 
+FINISH_LINE_Y = 280
+
 CAR_LENGTH = 40
 CAR_WIDTH = 20
 

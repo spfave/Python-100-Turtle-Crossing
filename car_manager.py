@@ -5,7 +5,7 @@ from game_parameters import limit_x
 
 # Constants
 COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
-VEHICLE_YLIMITS = (-250, 250)
+VEHICLE_YLIMITS = (-240, 240)
 STARTING_MOVE_DISTANCE = 5
 MOVE_INCREMENT = 10
 
