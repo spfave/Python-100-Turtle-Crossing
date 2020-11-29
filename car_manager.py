@@ -7,7 +7,7 @@ from game_parameters import limit_x
 COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
 VEHICLE_YLIMITS = (-240, 240)
 STARTING_MOVE_DISTANCE = 5
-MOVE_INCREMENT = 10
+MOVE_INCREMENT = 5
 
 
 # Classes
@@ -52,3 +52,6 @@ class CarManager:
     def move_cars(self):
         for car in self.cars:
             car.move(self.cars_speed)
+
+    def increase_speed(self):
+        self.cars_speed += MOVE_INCREMENT

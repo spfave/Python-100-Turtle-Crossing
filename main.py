@@ -19,7 +19,6 @@ screen.onkey(key="Up", fun=player.move_forward)
 
 # Run game
 game_is_on = True
-car_count = 0
 while game_is_on:
     screen.update()
     time.sleep(0.1)

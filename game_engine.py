@@ -13,6 +13,6 @@ def detect_car_collision(player, cars):
 
 def detect_road_crossing(player_yposition):
     """ Evaluate if the player crossed the road """
-    if player_yposition >= FINISH_LINE_Y:
+    if player_yposition > FINISH_LINE_Y:
         return True
     return False
