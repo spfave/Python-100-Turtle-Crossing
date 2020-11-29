@@ -1,5 +1,6 @@
 from turtle import Turtle
 from random import choice, randint
+from game_parameters import limit_x
 
 
 # Constants
@@ -22,13 +23,15 @@ class Car(Turtle):
         self.start_position()
 
     def start_position(self):
+        """ Place car at random start position on right side """
         # asterisks ahead of tuple/list reduces to values
         y = randint(*VEHICLE_YLIMITS)
-        self.goto(300, y)
+        self.goto(limit_x, y)
 
     def move(self, move_increment):
-        x = self.xcor()
-        y = self.ycor()+move_increment
+        """ Move car forward """
+        x = self.xcor()-move_increment
+        y = self.ycor()
         self.goto(x, y)
 
 
@@ -36,4 +39,13 @@ class CarManager:
     """  """
 
     def __init__(self):
-        pass
+        self.cars = []
+        self.cars_speed = STARTING_MOVE_DISTANCE
+
+    def add_car(self):
+        new_car = Car()
+        self.cars.append(new_car)
+
+    def move_cars(self):
+        for car in self.cars:
+            car.move(self.cars_speed)

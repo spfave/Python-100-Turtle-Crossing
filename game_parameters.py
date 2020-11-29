@@ -6,6 +6,10 @@ WINDOW_WIDTH = 600
 WINDOW_HEIGHT = 600
 
 
+# Variables
+limit_x = int(WINDOW_WIDTH/2)
+
+
 # Functions
 def game_screen():
     screen = Screen()
