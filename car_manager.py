@@ -46,6 +46,10 @@ class CarManager:
         new_car = Car()
         self.cars.append(new_car)
 
+    def randomly_add_car(self):
+        if randint(1, 6) == 1:
+            self.add_car()
+
     def move_cars(self):
         for car in self.cars:
             car.move(self.cars_speed)

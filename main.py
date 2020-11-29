@@ -23,13 +23,7 @@ while game_is_on:
     screen.update()
     time.sleep(0.1)
 
-    if car_count == 0:
-        carmanager.add_car()
-        car_count += 1
-    elif car_count == 5:
-        car_count = 0
-    else:
-        car_count += 1
+    carmanager.randomly_add_car()
     carmanager.move_cars()
 
 screen.exitonclick()
